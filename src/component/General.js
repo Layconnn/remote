@@ -17,8 +17,8 @@ const General = () => {
         dispatch(start()) 
       } else if ( power === 'on' ){
         dispatch(stop())
-        dispatch(Ten(null))
-        dispatch(constant(null))
+        dispatch(Ten())
+        dispatch(constant())
       }
     }
 
