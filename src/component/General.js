@@ -101,9 +101,16 @@ const General = () => {
     <div>
       <div className="everything">
         <div className="lists">
+          { power === 'on' 
+          ?
+          <>
           <p>Power: {power}</p>
           <p>Channel: {channel}</p>
           <p>Volume: {count}</p>
+          </>
+          :
+          ''
+        }
         </div>
         <div className="Vol">
           <button className="on" onClick={handleClick}>Power</button>
