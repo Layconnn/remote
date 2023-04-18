@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten } from "../slices/channels/channelSlice";
-import { increase, decrease, constant } from "../slices/counter/counterSlice";
+import { increase, decrease, constant, empty } from "../slices/counter/counterSlice";
 import { start, stop } from "../slices/power/powerSlice";
 
 
@@ -15,10 +15,11 @@ const General = () => {
     const handleClick = () => {
       if ( power === 'off' ){
         dispatch(start()) 
+        dispatch(constant())
       } else if ( power === 'on' ){
         dispatch(stop())
         dispatch(Ten())
-        dispatch(constant())
+        dispatch(empty())
       }
     }
 
