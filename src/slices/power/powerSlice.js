@@ -9,11 +9,14 @@ export const powerSlice = createSlice({
     initialState,
     reducers: {
         start: (state) => {
-            state.power = 'on';
+            state.power = "on";
+        },
+        stop: (state) => {
+            state.power = "off";
         }
     }
 })
 
-export const { start } = powerSlice.actions;
+export const { start, stop } = powerSlice.actions;
 
 export default powerSlice.reducer;
