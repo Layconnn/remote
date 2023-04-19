@@ -36,8 +36,8 @@ const General = () => {
           ''
         }
         </div>
-        <div className="Vol">
-          <button className="on" onClick={handleClick}>Power</button>
+        <div className="power-container">
+          <button className="power-switch" onClick={handleClick}>Power</button>
         </div>
         <Butttons />
         <p className="lists">Vol</p>
