@@ -1,10 +1,10 @@
-import General from "./component/General";
+import Home from "../pages/Home";
 import './styles.css';
 
 function App() {
   return (
     <div className="App">
-      <General />
+      <Home />
     </div>
   );
 }

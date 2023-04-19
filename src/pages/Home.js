@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
-import { start, stop } from "../slices/power/powerSlice";
-import Butttons from "./Butttons";
-import Volbuttons from "./Volbuttons";
+import { start, stop } from "../store/slices/power/powerSlice";
+import Butttons from "../component/Butttons";
+import Volbuttons from "../component/Volbuttons";
 
 
 
-const General = () => {
+const Home = () => {
     const count = useSelector((state) => state.counter.count);
     const power = useSelector((state) => state.switch.power);
     const channel = useSelector((state) => state.channels.channel);
@@ -47,4 +47,4 @@ const General = () => {
   )
 }
 
-export default General;
+export default Home;

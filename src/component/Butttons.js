@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten } from "../slices/channels/channelSlice";
+import { One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten } from "../store/slices/channels/channelSlice";
 
 const Butttons = () => {
     const dispatch = useDispatch();
