@@ -4,7 +4,6 @@ import counterReducer from '../slices/counter/counterSlice';
 import channelReducer from '../slices/channels/channelSlice';
 import powerReducer from '../slices/power/powerSlice';
 import { persistReducer, persistStore } from 'redux-persist';
-import thunk from 'redux-thunk';
 
 
 const persistConfig = {
@@ -21,8 +20,7 @@ const allReducers = combineReducers({
   const persistedReducer = persistReducer(persistConfig, allReducers)
 
 export const store = configureStore({
-    reducer: persistedReducer,
-    middleware: [thunk]
+    reducer: persistedReducer
 })
 
 export const persistor = persistStore(store)
