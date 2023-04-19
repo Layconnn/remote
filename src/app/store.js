@@ -14,7 +14,7 @@ const persistConfig = {
 const allReducers = combineReducers({
     counter: counterReducer,
     channels: channelReducer,
-    shazam: powerReducer
+    switch: powerReducer
 })
 
   const persistedReducer = persistReducer(persistConfig, allReducers)

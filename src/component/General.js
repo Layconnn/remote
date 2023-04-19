@@ -1,15 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
-import { One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten } from "../slices/channels/channelSlice";
-import { increase, decrease, } from "../slices/counter/counterSlice";
 import { start, stop } from "../slices/power/powerSlice";
-
+import Butttons from "./Butttons";
+import Volbuttons from "./Volbuttons";
 
 
 
 const General = () => {
     const count = useSelector((state) => state.counter.count);
+    const power = useSelector((state) => state.switch.power);
     const channel = useSelector((state) => state.channels.channel);
-    const power = useSelector((state) => state.shazam.power);
     const dispatch = useDispatch();
 
     const handleClick = () => {
@@ -40,23 +39,9 @@ const General = () => {
         <div className="Vol">
           <button className="on" onClick={handleClick}>Power</button>
         </div>
-        <div className="buttons">
-          <button className="omoooo" onClick={() => dispatch(One())}>1</button>
-          <button className="omoooo" onClick={() =>dispatch(Two())}>2</button>
-          <button className="omoooo" onClick={() => dispatch(Three())}>3</button>
-          <button className="omoooo" onClick={() => dispatch(Four())}>4</button>
-          <button className="omoooo" onClick={() => dispatch(Five())}>5</button>
-          <button className="omoooo" onClick={() => dispatch(Six())}>6</button>
-          <button className="omoooo" onClick={() => dispatch(Seven())}>7</button>
-          <button className="omoooo" onClick={() => dispatch(Eight())}>8</button>
-          <button className="omoooo" onClick={() => dispatch(Nine())}>9</button>
-          <button className="omoooo" onClick={() => dispatch(Ten())}>0</button>
-        </div>
+        <Butttons />
         <p className="lists">Vol</p>
-        <div className="Volume">
-          <button className="Jinadu"  onClick={() => dispatch(increase())}>+</button>
-          <button className="Jinadu" onClick={() => dispatch(decrease())}>-</button>
-        </div>
+        <Volbuttons />
       </div>
     </div>
   )

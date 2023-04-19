@@ -5,7 +5,7 @@ const initialState = {
 }
 
 export const powerSlice = createSlice({
-    name: 'shazam',
+    name: 'switch',
     initialState,
     reducers: {
         start: (state) => {
