@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { increase, decrease } from "../store/slices/counter/counterSlice";
+import { increase, decrease } from "../../store/slices/counter/counterSlice";
 
 const Volbuttons = () => {
     const count = useSelector((state) => state.counter.count);

@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { start, stop } from "../store/slices/power/powerSlice";
-import Butttons from "../component/Butttons";
-import Volbuttons from "../component/Volbuttons";
+import { One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten } from '../store/slices/channels/channelSlice';
+import Volbuttons from "../component/Buttons/Volbuttons";
+import Buttons from "../component/Buttons/Button";
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
       return (null);
     }
 
+
   return (
     <div>
       <div className="everything">
@@ -39,7 +41,18 @@ const Home = () => {
         <div className="power-container">
           <button className="power-switch" onClick={handleClick}>Power</button>
         </div>
-        <Butttons />
+        <div className="buttons">
+          <Buttons onClick={() => dispatch(One())} channel= '1' />
+          <Buttons onClick={() => dispatch(Two())} channel= '2' />
+          <Buttons onClick={() => dispatch(Three())} channel= '3' />
+          <Buttons onClick={() => dispatch(Four())} channel= '4' /> 
+          <Buttons onClick={() => dispatch(Five())} channel= '5' />
+          <Buttons onClick={() => dispatch(Six())} channel= '6' />
+          <Buttons onClick={() => dispatch(Seven())} channel= '7' />
+          <Buttons onClick={() => dispatch(Eight())} channel= '8' />
+          <Buttons onClick={() => dispatch(Nine())} channel= '9' />
+          <Buttons onClick={() => dispatch(Ten())} channel= '0' />
+        </div>
         <p className="lists">Vol</p>
         <Volbuttons />
       </div>
